@@ -31,7 +31,7 @@ body {
   background-color: var(--white);
   font-family: var(--main-font);
   font-size: 14px;
-  line-height: 1.72;
+  /* line-height: 1.72; */
   letter-spacing: 0.03em;
 }
 
@@ -277,6 +277,8 @@ img {
   background-color: #188ce8;
 }
 
+/* Модалка */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -295,28 +297,172 @@ img {
 
 .modal {
   position: absolute;
-  z-index: 999;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-
-  min-height: 581px;
-  min-width: 528px;
+  padding: 40px;
+  width: 528px;
   background-color: var(--white);
+  border-radius: 4px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-.close {
-  min-width: 30px;
-  min-height: 30px;
+
+.modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
-  border: none;
-  margin-top: 8px;
-  margin-right: 8px;
   background-color: transparent;
-  background-image: url(../images/icons.svg/close.svg);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: fill var(--transition);
+}
+
+.modal-btn:focus,
+.modal-btn:hover {
+  fill: var(--accent);
+}
+
+.registred-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registred-form-title {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  letter-spacing: 0.03em;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.registred-form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.registred-form-field {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  
+}
+
+.registred-form-label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.registred-form-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-right: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  transition: border-color var(--transition);
+}
+
+.registred-form-input:focus {
+  border-color: var(--accent);
+}
+
+.registred-form-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  transition: fill var(--transition);
+}
+
+.registred-form-input:focus + .registred-form-icon {
+  fill: var(--accent);
+}
+
+.registred-form-agree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 7px;
+}
+
+.registred-form-textarea {
+  display: block;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius:4px;
+  resize: none;
+  padding: 12px 16px;
+  outline: transparent;
+  transition: border-color var(--transition);
+}
+
+.registred-form-textarea::placeholder {
+  font-size: 12px;
+}
+
+.registred-form-textarea:focus {
+  border-color: var(--accent);
+}
+
+.icon-checked {
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.registred-form-chekbox:checked + .registred-form-chekbox-icons .icon-checked {
+  opacity: 1;
+}
+
+.icon-dischecked {
+  transition: opacity var(--transition);
+}
+
+.registred-form-chekbox:checked + .registred-form-chekbox-icons .icon-dischecked {
+  opacity: 0;
+}
+
+.registred-form-text {
+  user-select: none;
+  font-size:14px;
+  line-height: calc(24 \ 14);
+  letter-spacing: 0.03em;
+}
+
+.contract {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.registred-form-btn {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+  color: var(--white);
+  background-color: var(--accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
 }
 
 /* text */
@@ -636,7 +782,6 @@ img {
 .social-links-title {
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white);
@@ -684,7 +829,7 @@ img {
   width: 358px;
   height: 50px;
   padding-left: 16px;
-  
+  color:var(--white);
 }
 
 .email-form-btn {
