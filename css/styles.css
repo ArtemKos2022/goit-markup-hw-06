@@ -736,6 +736,7 @@ img {
   font-style: normal;
   font-weight: 400;
   line-height: 1.71;
+  
 }
 
 .main-logo-text-white {
@@ -773,6 +774,7 @@ img {
   display: flex;
   gap: 70px;
   align-items: baseline;
+  justify-content: space-between;
 }
 
 .social-links-block {
@@ -802,6 +804,7 @@ img {
 .email-form {
   display: flex;
   flex-direction: column;
+  
 }
 
 .email-form-title {
@@ -812,12 +815,14 @@ img {
   text-transform: uppercase;
   color: var(--white);
   margin-bottom: 20px;
+  
 }
 
 .email-form-group {
   display: flex;
   align-items: center;
   gap: 12px;
+  
 }
 
 .email-form-input {
@@ -830,6 +835,7 @@ img {
   height: 50px;
   padding-left: 16px;
   color:var(--white);
+  
 }
 
 .email-form-btn {
@@ -844,6 +850,8 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
+  
+  
 }
 
 .email-form-btn-text {
@@ -854,6 +862,7 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--white);
+  
 }
 
 
