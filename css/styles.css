@@ -167,11 +167,11 @@ img {
   color: var(--accent);
 }
 
-.nav-link:hover,
+/* .nav-link:hover,
 .nav-link:focus,
 .nav-link:active {
   color: var(--accent);
-}
+} */
 
 .list,
 .nav-item,
